@@ -1,9 +1,8 @@
-.fill-screen {
-  align-self: center;
-  flex: 0 0 75vh;
-}
-
 .flex-column {
   display: flex; /* or inline-flex */
   flex-direction: column;
+}
+
+.basic {
+  background: #303030;
 }

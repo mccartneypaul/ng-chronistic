@@ -14,6 +14,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { TimelineComponent } from './timeline/timeline.component';
 import { LayoutComponent } from './layout/layout.component';
+import { EventOverviewComponent } from './event-overview/event-overview.component';
+import { EventIconComponent } from './event-icon/event-icon.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LayoutComponent } from './layout/layout.component';
     OverviewMapComponent,
     TimelineComponent,
     LayoutComponent,
+    EventOverviewComponent,
+    EventIconComponent,
   ],
   imports: [
     BrowserModule,

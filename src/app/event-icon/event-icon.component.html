@@ -1,6 +1,6 @@
 <!-- Draggable DIV -->
 <div class="mydiv" [ngStyle]="{'top': top + 'px', 'left': left + 'px', 'width': width + 'px', 'height': height + 'px'}">
-  <button mat-icon-button>
+  <button mat-icon-button (click)="openDialog()">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">home</mat-icon>
   </button>
 </div>

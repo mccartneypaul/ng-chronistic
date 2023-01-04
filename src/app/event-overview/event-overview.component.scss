@@ -1,0 +1,40 @@
+.flex-row {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex; /* or inline-flex */
+  flex-direction: column;
+}
+
+.justify-spacebetween {
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1 1 50%;
+}
+
+.edit-description {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.add-entity {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.top-divider-gap {
+  margin-top: 10px;
+}
+
+.bot-divider-gap {
+  margin-bottom: 10px;
+}
+
+.vert-divider-gap {
+  margin-left: 10px;
+  margin-right: 10px;
+}

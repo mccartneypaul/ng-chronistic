@@ -1,0 +1,9 @@
+.slider-flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex; /* or inline-flex */
+  flex-direction: column;
+}

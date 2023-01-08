@@ -1,7 +1,8 @@
 import {Component, Inject} from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { EventLifeComponent } from '../event-life/event-life.component';
 
-export interface DialogData {
+export interface EventOverviewDialogData {
   animal: string;
   name: string;
 }
@@ -13,12 +14,25 @@ export interface DialogData {
 })
 export class EventOverviewComponent {
   constructor(
-    public dialogRef: MatDialogRef<EventOverviewComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    public eventLifeDialog: MatDialog,
+    public eventOverviewDialogRef: MatDialogRef<EventOverviewComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: EventOverviewDialogData,
   ) {}
 
   onNoClick(): void {
-    this.dialogRef.close();
+    this.eventOverviewDialogRef.close();
+  }
+
+  openEventLifeDialog(): void {
+    const eventLifeDialogRef = this.eventLifeDialog.open(EventLifeComponent, {
+      minWidth: '500px',
+      maxWidth: '750px',
+    });
+
+    eventLifeDialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
   }
 
 }

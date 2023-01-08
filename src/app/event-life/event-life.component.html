@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>Event Life</h1>
+<div mat-dialog-content>
+  <span class="slider-flex">
+    <ngx-slider [(value)]="eventSliderValue" [options]="eventSliderOptions"></ngx-slider>
+  </span>
+
+  <mat-divider></mat-divider>
+
+  <div class="flex-column">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Row number Column -->
+      <ng-container matColumnDef="rowNumber">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let location"> {{location.rowNumber}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let location"> {{location.name}} </td>
+      </ng-container>
+
+      <!-- X Position Column -->
+      <ng-container matColumnDef="posX">
+        <th mat-header-cell *matHeaderCellDef> X Position </th>
+        <td mat-cell *matCellDef="let location"> {{location.posX}} </td>
+      </ng-container>
+
+      <!-- Y Position Column -->
+      <ng-container matColumnDef="posY">
+        <th mat-header-cell *matHeaderCellDef> Y Position </th>
+        <td mat-cell *matCellDef="let location"> {{location.posY}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+    <button mat-raised-button class="add-entity" color="primary">Add Location</button>
+  </div>
+</div>

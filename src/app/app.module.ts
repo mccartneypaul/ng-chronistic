@@ -14,6 +14,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
 
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
@@ -21,6 +22,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { LayoutComponent } from './layout/layout.component';
 import { EventOverviewComponent } from './event-overview/event-overview.component';
 import { EventIconComponent } from './event-icon/event-icon.component';
+import { EventLifeComponent } from './event-life/event-life.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { EventIconComponent } from './event-icon/event-icon.component';
     LayoutComponent,
     EventOverviewComponent,
     EventIconComponent,
+    EventLifeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { EventIconComponent } from './event-icon/event-icon.component';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
+    MatTableModule,
     NgxSliderModule,
     FormsModule,
   ],
